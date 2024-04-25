@@ -3,7 +3,7 @@ plugins {
     id "java-library"
     id "idea"
     id "maven-publish"
-//    id "org.jetbrains.gradle.plugin.idea-ext" version "${ideaext_version}" // Required for NeoGradle
+    id "org.jetbrains.gradle.plugin.idea-ext" version "${ideaext_version}" // Required for NeoGradle
     id "com.modrinth.minotaur" version "${minotaur_version}"
     id "com.github.breadmoirai.github-release" version "${githubrelease_version}"
     id "org.ajoberstar.grgit.service" version "${grgitservice_version}"
@@ -96,19 +96,16 @@ subprojects {
                 "fabric_loader_versions_list": asJsonList(fabric_loader_versions),
                 "fabric_api_version": fabric_api_version,
                 "fabric_api_versions_list": asJsonList(fabric_api_versions),
-                "forge_loader_versions": forge_loader_versions,
-                "forge_version": forge_version,
-                "forge_versions": forge_versions,
-//                "neoforge_loader_versions": neoforge_loader_versions,
-//                "neoforge_version": neoforge_version,
-//                "neoforge_versions": neoforge_versions,
+                "neoforge_loader_versions": neoforge_loader_versions,
+                "neoforge_version": neoforge_version,
+                "neoforge_versions": neoforge_versions,
                 "homepage_url": homepage_url,
                 "sources_url": sources_url,
                 "issues_url": issues_url,
                 "contact_url": contact_url
         ]
 
-        filesMatching(["pack.mcmeta", "*.mod.json", "META-INF/mods.toml", "*.mixins.json", "assets/"+mod_id+"/lang/*.json"]) {
+        filesMatching(["pack.mcmeta", "*.mod.json", "META-INF/neoforge.mods.toml", "*.mixins.json", "assets/"+mod_id+"/lang/*.json"]) {
             expand expandProps
         }
         inputs.properties(expandProps)
