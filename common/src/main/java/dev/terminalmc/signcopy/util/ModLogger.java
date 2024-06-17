@@ -1,9 +1,4 @@
-/*
- * Copyright 2023, 2024 NotRyken
- * SPDX-License-Identifier: Apache-2.0
- */
-
-package com.notryken.signcopy.util;
+package dev.terminalmc.signcopy.util;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;

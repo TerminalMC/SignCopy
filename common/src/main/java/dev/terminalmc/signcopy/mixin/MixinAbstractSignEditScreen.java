@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package com.notryken.signcopy.mixin;
+package dev.terminalmc.signcopy.mixin;
 
-import com.notryken.signcopy.SignCopy;
+import dev.terminalmc.signcopy.SignCopy;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.inventory.AbstractSignEditScreen;

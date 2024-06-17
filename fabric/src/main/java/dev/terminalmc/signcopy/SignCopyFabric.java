@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package com.notryken.signcopy;
+package dev.terminalmc.signcopy;
 
 import net.fabricmc.api.ClientModInitializer;
 

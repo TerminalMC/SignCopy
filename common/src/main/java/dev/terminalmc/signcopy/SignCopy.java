@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package com.notryken.signcopy;
+package dev.terminalmc.signcopy;
 
-import com.notryken.signcopy.util.ModLogger;
+import dev.terminalmc.signcopy.util.ModLogger;
 import net.minecraft.world.level.block.entity.SignText;
 
 public class SignCopy {
