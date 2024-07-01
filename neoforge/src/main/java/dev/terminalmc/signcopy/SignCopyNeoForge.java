@@ -5,9 +5,10 @@
 
 package dev.terminalmc.signcopy;
 
+import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.Mod;
 
-@Mod(SignCopy.MOD_ID)
+@Mod(value = SignCopy.MOD_ID, dist = Dist.CLIENT)
 public class SignCopyNeoForge {
     public SignCopyNeoForge() {
         SignCopy.init();
