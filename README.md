@@ -25,8 +25,8 @@ Copy, insert and erase text from signs using a simple GUI.
 
 <table style="width:100%;">
   <tr>
-    <td style="width:50%;"><img src="https://raw.githubusercontent.com/TerminalMC/SignCopy/HEAD/assets/images/showcase/demo_01.png" style="width:100%;"></td>
-    <td style="width:50%;"><img src="https://raw.githubusercontent.com/TerminalMC/SignCopy/HEAD/assets/images/showcase/demo_02.png" style="width:100%;"></td>
+    <td style="width:50%;"><img src="https://raw.githubusercontent.com/TerminalMC/SignCopy/HEAD/assets/images/demo_01.png" style="width:100%;"></td>
+    <td style="width:50%;"><img src="https://raw.githubusercontent.com/TerminalMC/SignCopy/HEAD/assets/images/demo_02.png" style="width:100%;"></td>
   </tr>
 </table>
 

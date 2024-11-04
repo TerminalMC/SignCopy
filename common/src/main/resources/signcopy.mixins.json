@@ -5,9 +5,9 @@
   "refmap": "${mod_id}.refmap.json",
   "compatibilityLevel": "JAVA_${java_version}",
   "mixins": [
-    "MixinSignBlock"
   ],
   "client": [
+    "MixinSignBlock",
     "MixinAbstractSignEditScreen"
   ],
   "server": [
