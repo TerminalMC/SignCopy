@@ -4,6 +4,8 @@ plugins {
 }
 
 dependencies {
+    // JiJ MixinExtras if required to be newer than minimum loader-provided version
+//    implementation(jarJar("io.github.llamalad7:mixinextras-neoforge:${mixinextras_version}"))
 }
 
 neoForge {
@@ -23,9 +25,6 @@ neoForge {
         }
         client {
             client()
-        }
-        data {
-            data()
         }
         server {
             server()

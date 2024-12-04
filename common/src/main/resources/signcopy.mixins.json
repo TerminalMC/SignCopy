@@ -7,8 +7,8 @@
   "mixins": [
   ],
   "client": [
-    "MixinSignBlock",
-    "MixinAbstractSignEditScreen"
+    "MixinAbstractSignEditScreen",
+    "MixinSignBlock"
   ],
   "server": [
   ],

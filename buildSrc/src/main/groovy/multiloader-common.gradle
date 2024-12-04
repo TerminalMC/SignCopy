@@ -54,13 +54,13 @@ repositories {
 }
 
 sourcesJar {
-    from(rootProject.file("LICENSE")) {
+    from(rootProject.file("LICENSE.txt")) {
         rename { "${it}_${mod_name}" }
     }
 }
 
 jar {
-    from(rootProject.file("LICENSE")) {
+    from(rootProject.file("LICENSE.txt")) {
         rename { "${it}_${mod_name}" }
     }
 
@@ -114,7 +114,7 @@ processResources {
             "neoforge_loader_versions": neoforge_loader_versions,
             "neoforge_versions": neoforge_versions,
     ]
-    filesMatching(["pack.mcmeta", "*.mod.json", "META-INF/*mods.toml", "*.mixins.json"]) {
+    filesMatching(["pack.mcmeta", "*.mod.json", "META-INF/*mods.toml", "*.mixins.json", "assets/"+mod_id+"/lang/*.json"]) {
         expand expandProps
     }
     inputs.properties(expandProps)

@@ -16,8 +16,7 @@
   "entrypoints": {
     "main": [],
     "client": ["${mod_group}.${mod_id}.${mod_name}Fabric"],
-    "server": [],
-    "modmenu": ["${mod_group}.${mod_id}.gui.screen.ModMenuIntegration"]
+    "server": []
   },
 
   "mixins": [
@@ -30,8 +29,7 @@
   "depends": {
     "java": [$java_versions_fabric_list],
     "minecraft": [$minecraft_versions_fabric_list],
-    "fabricloader": [$fabric_loader_versions_list],
-    "fabric-api": [$fabric_api_versions_list]
+    "fabricloader": [$fabric_loader_versions_list]
   },
 
   "recommends": {},
