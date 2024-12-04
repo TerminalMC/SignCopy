@@ -2,4 +2,4 @@
 
 ## 2.0.2
 
-- Changed nothing
+- Fixed mixin targets
