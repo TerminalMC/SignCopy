@@ -1,5 +1,5 @@
 /*
- * Copyright 2024 TerminalMC
+ * Copyright 2025 TerminalMC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,6 +20,7 @@ import dev.terminalmc.signcopy.util.ModLogger;
 import net.minecraft.world.level.block.entity.SignText;
 
 public class SignCopy {
+
     public static final String MOD_ID = "signcopy";
     public static final String MOD_NAME = "SignCopy";
     public static final ModLogger LOG = new ModLogger(MOD_NAME);

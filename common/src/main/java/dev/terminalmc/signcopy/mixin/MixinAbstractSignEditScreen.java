@@ -1,5 +1,5 @@
 /*
- * Copyright 2024 TerminalMC
+ * Copyright 2025 TerminalMC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,6 +34,7 @@ import java.util.Arrays;
 
 @Mixin(AbstractSignEditScreen.class)
 public abstract class MixinAbstractSignEditScreen extends Screen {
+
     protected MixinAbstractSignEditScreen(Component title) {
         super(title);
     }
@@ -48,22 +49,31 @@ public abstract class MixinAbstractSignEditScreen extends Screen {
     @Shadow
     public abstract void onClose();
 
-    @Inject(method = "init", at = @At("RETURN"))
+    @Inject(
+            method = "init",
+            at = @At("RETURN")
+    )
     private void addEditButtons(CallbackInfo ci) {
-        Button copyButton = Button.builder(Component.nullToEmpty("Copy"),
-                        (button) -> signCopy$copyText())
+        Button copyButton = Button.builder(
+                        Component.nullToEmpty("Copy"),
+                        (button) -> signCopy$copyText()
+                )
                 .bounds(this.width / 2 - 100, this.height / 4 + 119, 60, 20)
                 .build();
         this.addRenderableWidget(copyButton);
 
-        Button insertButton = Button.builder(Component.nullToEmpty("Insert"),
-                        (button) -> signCopy$insertText())
+        Button insertButton = Button.builder(
+                        Component.nullToEmpty("Insert"),
+                        (button) -> signCopy$insertText()
+                )
                 .bounds(this.width / 2 - 30, this.height / 4 + 119, 60, 20)
                 .build();
         this.addRenderableWidget(insertButton);
 
-        Button eraseButton = Button.builder(Component.nullToEmpty("Erase"),
-                        (button) -> signCopy$eraseText())
+        Button eraseButton = Button.builder(
+                        Component.nullToEmpty("Erase"),
+                        (button) -> signCopy$eraseText()
+                )
                 .bounds(this.width / 2 + 40, this.height / 4 + 119, 60, 20)
                 .build();
         this.addRenderableWidget(eraseButton);
@@ -80,7 +90,7 @@ public abstract class MixinAbstractSignEditScreen extends Screen {
     @Unique
     private void signCopy$insertText() {
         if (SignCopy.copiedText != null) {
-            for(int i = 0; i < this.messages.length; i++) {
+            for (int i = 0; i < this.messages.length; i++) {
                 this.messages[i] = SignCopy.copiedText.getMessage(i, false).getString();
             }
             this.onClose();

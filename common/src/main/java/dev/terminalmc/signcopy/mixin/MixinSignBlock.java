@@ -1,5 +1,5 @@
 /*
- * Copyright 2024 TerminalMC
+ * Copyright 2025 TerminalMC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -35,10 +35,16 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(SignBlock.class)
 public class MixinSignBlock {
-    @Inject(method = "useItemOn", at = @At("HEAD"))
-    public void onSignUse(ItemStack itemStack, BlockState state, Level world, BlockPos pos,
-                          Player player, InteractionHand hand, BlockHitResult hitResult,
-                          CallbackInfoReturnable<InteractionResult> cir) {
+
+    @Inject(
+            method = "useItemOn",
+            at = @At("HEAD")
+    )
+    public void onSignUse(
+            ItemStack itemStack, BlockState state, Level world, BlockPos pos,
+            Player player, InteractionHand hand, BlockHitResult hitResult,
+            CallbackInfoReturnable<InteractionResult> cir
+    ) {
         if (world.getBlockEntity(pos) instanceof SignBlockEntity sign &&
                 sign.isWaxed() && itemStack.isEmpty()) {
             SignCopy.copiedText = sign.getFrontText();
