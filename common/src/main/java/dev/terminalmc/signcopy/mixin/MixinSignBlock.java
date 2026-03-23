@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 TerminalMC
+ * Copyright 2026 TerminalMC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,7 +34,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(SignBlock.class)
-public class MixinSignBlock {
+public abstract class MixinSignBlock {
 
     @Inject(
             method = "useItemOn",
@@ -48,7 +48,7 @@ public class MixinSignBlock {
         if (world.getBlockEntity(pos) instanceof SignBlockEntity sign &&
                 sign.isWaxed() && itemStack.isEmpty()) {
             SignCopy.copiedText = sign.getFrontText();
-            player.displayClientMessage(Component.literal("Text copied from sign!"), true);
+            player.sendOverlayMessage(Component.literal("Text copied from sign!"));
         }
     }
 }
