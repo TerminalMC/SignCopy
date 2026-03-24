@@ -16,6 +16,7 @@
 
 package dev.terminalmc.signcopy.util;
 
+import dev.terminalmc.signcopy.platform.services.PlatformServices;
 import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
 import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
@@ -36,9 +37,9 @@ public class MixinConfigPlugin implements IMixinConfigPlugin {
 
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
-//        if (mixinClassName.contains("mixin.somesubpackage")) {
-//            return PlatformServices.getInstance().isModLoaded("somemodid");
-//        }
+        if (mixinClassName.contains("mixin")) {
+            return !PlatformServices.getInstance().isModLoaded("signedit");
+        }
         return true;
     }
 
