@@ -1,5 +1,11 @@
 <div align="center"><center>
 
+## Archival Notice
+
+The functionality of this mod is now covered by [SignTweaks](https://github.com/TerminalMC/SignTweaks).
+
+This project will no longer receive normal updates, but requests may still be considered.
+
 <img alt="Icon" width=100 src="https://raw.githubusercontent.com/TerminalMC/SignCopy/HEAD/common/src/main/resources/assets/signcopy/icon.png">
 
 ## SignCopy
